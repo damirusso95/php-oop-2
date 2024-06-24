@@ -10,24 +10,28 @@ include __DIR__ . "/data.php";
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP OOP2</title>
+    <title>PHP OOP - Pet Shop</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <h1>Pet Shop Products</h1>
-    <ul>
-        <?php foreach ($prodotti as $prodotto) {
-            echo "<li>" . $prodotto->descrizione() . "</li>";
-        } ?>
-    </ul>
-
-    <h2> prodotti</h2>
-    <pre>
-        <?= var_dump($prodotti) ?>
-    </pre>
-
-</body>
+    <div class="product-cards">
+        <?php foreach ($prodotti as $prodotto) { ?>
+            <div class="card">
+                <img src="<?= $prodotto->getImmagine() ?>" alt="<?= $prodotto->getNome() ?>">
+                <h2><?= $prodotto->getNome() ?></h2>
+                <p><?= $prodotto->descrizione() ?></p>
+                <?php if ($prodotto instanceof Cuccia) { ?>
+                    <p>Dimensioni: <?= $prodotto->getDimensioni() ?></p>
+                    <p>Materiale: <?= $prodotto->getMateriale() ?></p>
+                <?php } ?>
+                <p class="price">€<?= $prodotto->getPrezzo() ?></p>
+            </div>
+        <?php } ?>
+    </div>
+    </body>
 
 </html>
+    

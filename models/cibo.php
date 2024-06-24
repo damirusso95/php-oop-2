@@ -4,8 +4,8 @@ class Cibo extends Prodotto {
     public $scadenza;
     public $ingredienti;
 
-    public function __construct($id, $nome, $descrizione, $prezzo, Categoria $categoria, $scadenza, $ingredienti) {
-        parent::__construct($id, $nome, $descrizione, $prezzo, $categoria);
+    public function __construct($id, $nome, $descrizione, $prezzo, Categoria $categoria, $immagine, $scadenza, $ingredienti) {
+        parent::__construct($id, $nome, $descrizione, $prezzo, $categoria, $immagine);
         $this->scadenza = $scadenza;
         $this->ingredienti = $ingredienti;
     }

@@ -2,12 +2,12 @@
 
 class Cuccia extends Prodotto {
     public $dimensioni;
-    public $materiale;
+    public $materiale; 
 
-    public function __construct($id, $nome, $descrizione, $prezzo, Categoria $categoria, $dimensioni, $materiale) {
-        parent::__construct($id, $nome, $descrizione, $prezzo, $categoria);
+    public function __construct($id, $nome, $descrizione, $prezzo, Categoria $categoria, $immagine, $dimensioni, $materiale) {
+        parent::__construct($id, $nome, $descrizione, $prezzo, $categoria, $immagine);
         $this->dimensioni = $dimensioni;
-        $this->materiale = $materiale;
+        $this->materiale = $materiale; 
     }
 
     public function getDimensioni() {
