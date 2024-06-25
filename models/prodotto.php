@@ -41,6 +41,10 @@ class Prodotto {
         return $this->immagine;
     }
 
+    public function getClasseProdotto() {
+        return get_class($this);
+    }
+
     public function descrizione() {
         return $this->nome . " (" . $this->categoria->getNome() . "): " . $this->descrizione . " - €" . $this->prezzo;
     }

@@ -36,6 +36,8 @@ include __DIR__ . "/data.php";
                     <i class="<?= $prodotto->getCategoria()->getIcona() ?>"></i>
                     <!-- Stampa il prezzo del prodotto -->
                     <p class="price">€<?= $prodotto->getPrezzo() ?></p>
+                    <!-- Stampa la classe del prodotto -->
+                    <p>Questo è un "<?= $prodotto->getNome() ?>", con prezzo €<?= $prodotto->getPrezzo() ?>, di classe <?= $prodotto->getClasseProdotto() ?>.</p>
                 </div>
             <?php } ?>
         <?php } else { ?>
