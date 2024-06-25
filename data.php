@@ -8,8 +8,8 @@ include __DIR__ . "/models/Gioco.php";
 include __DIR__ . "/models/Cuccia.php";
 
 // Creo oggetti Categoria per le categorie "Cani" e "Gatti"
-$cani = new Categoria(1, "Cani", "Prodotti per cani", "./IMG/icona-cani.png");
-$gatti = new Categoria(2, "Gatti", "Prodotti per gatti", "./IMG/icona-gatti.png");
+$cani = new Categoria(1, "Cani", "Prodotti per cani", "fa-solid fa-dog");
+$gatti = new Categoria(2, "Gatti", "Prodotti per gatti", "fa-solid fa-cat");
 
 // Creo un array di prodotti con oggetti di diverse sottoclassi di Prodotto
 $prodotti = [

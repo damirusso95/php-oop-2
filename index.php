@@ -33,7 +33,7 @@ include __DIR__ . "/data.php";
                     <!-- Stampa la descrizione della categoria -->
                     <p><?= $prodotto->getCategoria()->getDescrizione() ?></p>
                     <!-- Stampa l'icona della categoria -->
-                    <img src="<?= $prodotto->getCategoria()->getIcona() ?>" alt="<?= $prodotto->getCategoria()->getNome() ?> Icona">
+                    <i class="<?= $prodotto->getCategoria()->getIcona() ?>"></i>
                     <!-- Stampa il prezzo del prodotto -->
                     <p class="price">€<?= $prodotto->getPrezzo() ?></p>
                 </div>
